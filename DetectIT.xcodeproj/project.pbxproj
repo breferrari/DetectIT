@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F5BA7C162038F16600C55CF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BA7C152038F16600C55CF0 /* AppDelegate.swift */; };
-		F5BA7C182038F16600C55CF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BA7C172038F16600C55CF0 /* ViewController.swift */; };
+		F5BA7C182038F16600C55CF0 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BA7C172038F16600C55CF0 /* CameraViewController.swift */; };
 		F5BA7C1B2038F16600C55CF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5BA7C192038F16600C55CF0 /* Main.storyboard */; };
 		F5BA7C1D2038F16600C55CF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5BA7C1C2038F16600C55CF0 /* Assets.xcassets */; };
 		F5BA7C202038F16600C55CF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5BA7C1E2038F16600C55CF0 /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		F5BA7C122038F16600C55CF0 /* DetectIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DetectIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5BA7C152038F16600C55CF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F5BA7C172038F16600C55CF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F5BA7C172038F16600C55CF0 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		F5BA7C1A2038F16600C55CF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F5BA7C1C2038F16600C55CF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5BA7C1F2038F16600C55CF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,14 +54,54 @@
 		F5BA7C142038F16600C55CF0 /* DetectIT */ = {
 			isa = PBXGroup;
 			children = (
+				F5BA7C272038F17500C55CF0 /* Resources */,
+				F5BA7C282038F17A00C55CF0 /* Source Code */,
+				F5BA7C292038F17E00C55CF0 /* Supporting Files */,
 				F5BA7C152038F16600C55CF0 /* AppDelegate.swift */,
-				F5BA7C172038F16600C55CF0 /* ViewController.swift */,
-				F5BA7C192038F16600C55CF0 /* Main.storyboard */,
-				F5BA7C1C2038F16600C55CF0 /* Assets.xcassets */,
-				F5BA7C1E2038F16600C55CF0 /* LaunchScreen.storyboard */,
-				F5BA7C212038F16600C55CF0 /* Info.plist */,
 			);
 			path = DetectIT;
+			sourceTree = "<group>";
+		};
+		F5BA7C272038F17500C55CF0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F5BA7C2B2038F18C00C55CF0 /* Assets */,
+				F5BA7C2A2038F18700C55CF0 /* Storyboards */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F5BA7C282038F17A00C55CF0 /* Source Code */ = {
+			isa = PBXGroup;
+			children = (
+				F5BA7C172038F16600C55CF0 /* CameraViewController.swift */,
+			);
+			path = "Source Code";
+			sourceTree = "<group>";
+		};
+		F5BA7C292038F17E00C55CF0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5BA7C212038F16600C55CF0 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F5BA7C2A2038F18700C55CF0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F5BA7C1E2038F16600C55CF0 /* LaunchScreen.storyboard */,
+				F5BA7C192038F16600C55CF0 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F5BA7C2B2038F18C00C55CF0 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F5BA7C1C2038F16600C55CF0 /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5BA7C182038F16600C55CF0 /* ViewController.swift in Sources */,
+				F5BA7C182038F16600C55CF0 /* CameraViewController.swift in Sources */,
 				F5BA7C162038F16600C55CF0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,6 +190,7 @@
 				F5BA7C1A2038F16600C55CF0 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		F5BA7C1E2038F16600C55CF0 /* LaunchScreen.storyboard */ = {
@@ -158,6 +199,7 @@
 				F5BA7C1F2038F16600C55CF0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -276,9 +318,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HATQPXT843;
-				INFOPLIST_FILE = DetectIT/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DetectIT/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.bferrari.DetectIT;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.bferrari.detectit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -291,9 +333,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HATQPXT843;
-				INFOPLIST_FILE = DetectIT/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DetectIT/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.bferrari.DetectIT;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.bferrari.detectit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
