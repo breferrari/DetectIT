@@ -25,7 +25,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="jvj-50-4Qj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="FxZ-yn-FBY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jvj-50-4Qj" secondAttribute="bottom" id="HUZ-WR-3Q0"/>
+                            <constraint firstAttribute="bottom" secondItem="jvj-50-4Qj" secondAttribute="bottom" id="HUZ-WR-3Q0"/>
                             <constraint firstItem="jvj-50-4Qj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SeT-4N-Vna"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jvj-50-4Qj" secondAttribute="trailing" id="f7a-Ax-VZS"/>
                         </constraints>

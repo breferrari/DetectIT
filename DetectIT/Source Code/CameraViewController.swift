@@ -11,6 +11,10 @@ class CameraViewController: UIViewController {
 
     // MARK: Properties
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     private var bounds: CGRect = CGRect(x: 0, y: 0, width: 0, height: 0)
 
     // MARK: View Lifecycle
@@ -25,7 +29,12 @@ class CameraViewController: UIViewController {
         configureSession()
     }
 
-    // MARK: Configuration
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        pauseSession()
+    }
+
+    // MARK: SceneView Configuration
 
     private func configureSceneView() {
         // Define delegate
@@ -47,10 +56,26 @@ class CameraViewController: UIViewController {
         sceneView.session.run(configuration)
     }
 
+    private func pauseSession() {
+        // Pausa sessão para não ficar rodando em background
+        sceneView.session.pause()
+    }
+
 }
 
 // MARK: SceneView Delegate
 
 extension CameraViewController: ARSCNViewDelegate {
+
+    func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
+        switch camera.trackingState {
+        case .limited(.initializing):
+            print("[sceneView] Initializing...")
+        case .notAvailable:
+            print("[sceneView] Not available.")
+        default:
+            print("[sceneView] Initialized.")
+        }
+    }
 
 }
