@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F53E55EE2038FBB900D230A8 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F53E55ED2038FBB900D230A8 /* SVProgressHUD.framework */; };
 		F5BA7C162038F16600C55CF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BA7C152038F16600C55CF0 /* AppDelegate.swift */; };
 		F5BA7C182038F16600C55CF0 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BA7C172038F16600C55CF0 /* CameraViewController.swift */; };
 		F5BA7C1B2038F16600C55CF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5BA7C192038F16600C55CF0 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F53E55ED2038FBB900D230A8 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
 		F5BA7C122038F16600C55CF0 /* DetectIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DetectIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5BA7C152038F16600C55CF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5BA7C172038F16600C55CF0 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +31,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F53E55EE2038FBB900D230A8 /* SVProgressHUD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F53E55EC2038FBB900D230A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F53E55ED2038FBB900D230A8 /* SVProgressHUD.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F5BA7C092038F16600C55CF0 = {
 			isa = PBXGroup;
 			children = (
 				F5BA7C142038F16600C55CF0 /* DetectIT */,
 				F5BA7C132038F16600C55CF0 /* Products */,
+				F53E55EC2038FBB900D230A8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +126,7 @@
 				F5BA7C0E2038F16600C55CF0 /* Sources */,
 				F5BA7C0F2038F16600C55CF0 /* Frameworks */,
 				F5BA7C102038F16600C55CF0 /* Resources */,
+				F53E55F02038FBDF00D230A8 /* Carthage copy-frameworks */,
 			);
 			buildRules = (
 			);
@@ -170,6 +183,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F53E55F02038FBDF00D230A8 /* Carthage copy-frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
+			);
+			name = "Carthage copy-frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F5BA7C0E2038F16600C55CF0 /* Sources */ = {
@@ -318,6 +349,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HATQPXT843;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/DetectIT/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.bferrari.detectit;
@@ -333,6 +368,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HATQPXT843;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/DetectIT/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.bferrari.detectit;

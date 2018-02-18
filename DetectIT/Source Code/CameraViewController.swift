@@ -3,6 +3,8 @@ import SceneKit
 import ARKit
 import Vision
 
+import SVProgressHUD
+
 class CameraViewController: UIViewController {
 
     // MARK: IBOutlets
@@ -71,10 +73,11 @@ extension CameraViewController: ARSCNViewDelegate {
         switch camera.trackingState {
         case .limited(.initializing):
             print("[sceneView] Initializing...")
+            SVProgressHUD.show(withStatus: "Initializing...")
         case .notAvailable:
             print("[sceneView] Not available.")
         default:
-            print("[sceneView] Initialized.")
+            SVProgressHUD.dismiss()
         }
     }
 
