@@ -18,21 +18,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jvj-50-4Qj">
+                            <arskView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NQf-9q-xdB">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </arscnView>
+                            </arskView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="jvj-50-4Qj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="FxZ-yn-FBY"/>
-                            <constraint firstAttribute="bottom" secondItem="jvj-50-4Qj" secondAttribute="bottom" id="HUZ-WR-3Q0"/>
-                            <constraint firstItem="jvj-50-4Qj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SeT-4N-Vna"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jvj-50-4Qj" secondAttribute="trailing" id="f7a-Ax-VZS"/>
+                            <constraint firstAttribute="bottom" secondItem="NQf-9q-xdB" secondAttribute="bottom" id="Zjv-AU-nAD"/>
+                            <constraint firstItem="NQf-9q-xdB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cCc-Ar-I8R"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NQf-9q-xdB" secondAttribute="trailing" id="fBc-Sq-a4c"/>
+                            <constraint firstItem="NQf-9q-xdB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sT0-4w-JQa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="sceneView" destination="jvj-50-4Qj" id="dSq-Uw-Nhu"/>
+                        <outlet property="sceneView" destination="NQf-9q-xdB" id="xpn-tx-hud"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

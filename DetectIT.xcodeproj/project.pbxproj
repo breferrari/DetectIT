@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F53E55EE2038FBB900D230A8 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F53E55ED2038FBB900D230A8 /* SVProgressHUD.framework */; };
+		F53E561420396AF700D230A8 /* Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F53E561320396AF700D230A8 /* Scene.sks */; };
+		F53E561620396B0600D230A8 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53E561520396B0600D230A8 /* Scene.swift */; };
+		F53E561820396CEC00D230A8 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F53E561720396CEC00D230A8 /* Inceptionv3.mlmodel */; };
+		F53E561C20396F2C00D230A8 /* ARBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53E561B20396F2C00D230A8 /* ARBridge.swift */; };
 		F5BA7C162038F16600C55CF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BA7C152038F16600C55CF0 /* AppDelegate.swift */; };
 		F5BA7C182038F16600C55CF0 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BA7C172038F16600C55CF0 /* CameraViewController.swift */; };
 		F5BA7C1B2038F16600C55CF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5BA7C192038F16600C55CF0 /* Main.storyboard */; };
@@ -17,6 +20,10 @@
 
 /* Begin PBXFileReference section */
 		F53E55ED2038FBB900D230A8 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
+		F53E561320396AF700D230A8 /* Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Scene.sks; sourceTree = "<group>"; };
+		F53E561520396B0600D230A8 /* Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		F53E561720396CEC00D230A8 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		F53E561B20396F2C00D230A8 /* ARBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARBridge.swift; sourceTree = "<group>"; };
 		F5BA7C122038F16600C55CF0 /* DetectIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DetectIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5BA7C152038F16600C55CF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5BA7C172038F16600C55CF0 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -31,7 +38,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F53E55EE2038FBB900D230A8 /* SVProgressHUD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,12 +52,52 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F53E561920396CF600D230A8 /* CoreML */ = {
+			isa = PBXGroup;
+			children = (
+				F53E561720396CEC00D230A8 /* Inceptionv3.mlmodel */,
+			);
+			path = CoreML;
+			sourceTree = "<group>";
+		};
+		F53E561A20396D0500D230A8 /* SpriteKit */ = {
+			isa = PBXGroup;
+			children = (
+				F53E561320396AF700D230A8 /* Scene.sks */,
+			);
+			path = SpriteKit;
+			sourceTree = "<group>";
+		};
+		F53E561D2039707300D230A8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F5BA7C172038F16600C55CF0 /* CameraViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F53E561E2039708A00D230A8 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F53E561B20396F2C00D230A8 /* ARBridge.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		F53E561F203970A600D230A8 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				F53E561520396B0600D230A8 /* Scene.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
 		F5BA7C092038F16600C55CF0 = {
 			isa = PBXGroup;
 			children = (
 				F5BA7C142038F16600C55CF0 /* DetectIT */,
-				F5BA7C132038F16600C55CF0 /* Products */,
 				F53E55EC2038FBB900D230A8 /* Frameworks */,
+				F5BA7C132038F16600C55CF0 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				F5BA7C2B2038F18C00C55CF0 /* Assets */,
+				F53E561920396CF600D230A8 /* CoreML */,
+				F53E561A20396D0500D230A8 /* SpriteKit */,
 				F5BA7C2A2038F18700C55CF0 /* Storyboards */,
 			);
 			path = Resources;
@@ -86,7 +134,9 @@
 		F5BA7C282038F17A00C55CF0 /* Source Code */ = {
 			isa = PBXGroup;
 			children = (
-				F5BA7C172038F16600C55CF0 /* CameraViewController.swift */,
+				F53E561D2039707300D230A8 /* Controller */,
+				F53E561E2039708A00D230A8 /* Helper */,
+				F53E561F203970A600D230A8 /* Scene */,
 			);
 			path = "Source Code";
 			sourceTree = "<group>";
@@ -126,7 +176,6 @@
 				F5BA7C0E2038F16600C55CF0 /* Sources */,
 				F5BA7C0F2038F16600C55CF0 /* Frameworks */,
 				F5BA7C102038F16600C55CF0 /* Resources */,
-				F53E55F02038FBDF00D230A8 /* Carthage copy-frameworks */,
 			);
 			buildRules = (
 			);
@@ -178,29 +227,12 @@
 			files = (
 				F5BA7C202038F16600C55CF0 /* LaunchScreen.storyboard in Resources */,
 				F5BA7C1D2038F16600C55CF0 /* Assets.xcassets in Resources */,
+				F53E561420396AF700D230A8 /* Scene.sks in Resources */,
 				F5BA7C1B2038F16600C55CF0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		F53E55F02038FBDF00D230A8 /* Carthage copy-frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
-			);
-			name = "Carthage copy-frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F5BA7C0E2038F16600C55CF0 /* Sources */ = {
@@ -208,7 +240,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5BA7C182038F16600C55CF0 /* CameraViewController.swift in Sources */,
+				F53E561820396CEC00D230A8 /* Inceptionv3.mlmodel in Sources */,
+				F53E561C20396F2C00D230A8 /* ARBridge.swift in Sources */,
 				F5BA7C162038F16600C55CF0 /* AppDelegate.swift in Sources */,
+				F53E561620396B0600D230A8 /* Scene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
