@@ -48,7 +48,6 @@ class CameraViewController: UIViewController {
     private func configureSession() {
         // Cria configuração da sessão
         let configuration = ARWorldTrackingConfiguration()
-        configuration.planeDetection = .horizontal
         sceneView.session.run(configuration)
     }
 
@@ -69,7 +68,7 @@ extension CameraViewController: ARSKViewDelegate {
             return nil
         }
 
-        // Caso positivo, cria um label para exibir no node e retorna
+        // Caso positivo, cria um label para exibir no node e retorna o node a ser exibido
         let labelNode = SKLabelNode(text: identifier)
         labelNode.horizontalAlignmentMode = .center
         labelNode.verticalAlignmentMode = .center
