@@ -2,7 +2,7 @@ import UIKit
 import SceneKit
 import ARKit
 
-class CameraViewController: UIViewController {
+class SceneViewController: UIViewController {
 
     // MARK: IBOutlets
 
@@ -60,7 +60,7 @@ class CameraViewController: UIViewController {
 
 // MARK: ARSKViewDelegate
 
-extension CameraViewController: ARSKViewDelegate {
+extension SceneViewController: ARSKViewDelegate {
 
     func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
         // Verifica se anchor está registrado
@@ -68,7 +68,7 @@ extension CameraViewController: ARSKViewDelegate {
             return nil
         }
 
-        // Caso positivo, cria um label para exibir no node e retorna o node a ser exibido
+        // Caso positivo, cria um SKLabelNode, que é a label que será exibida no ponto do anchor.
         let labelNode = SKLabelNode(text: identifier)
         labelNode.horizontalAlignmentMode = .center
         labelNode.verticalAlignmentMode = .center
