@@ -3,8 +3,6 @@ import ARKit
 import Vision
 
 class Scene: SKScene {
-
-    lazy weak var anchorsToIdentifiers: [ARAnchor : String]?
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let sceneView = self.view as? ARSKView else {
