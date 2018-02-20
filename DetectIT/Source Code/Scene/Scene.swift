@@ -32,9 +32,9 @@ class Scene: SKScene {
                                     return
                             }
 
-                            // Criamos um transform com uma translação de 0.2 metros a frente da camera
+                            // Criamos um transform com uma translação de ~0.2 metros a frente da camera
                             var translation = matrix_identity_float4x4
-                            translation.columns.3.z = -0.4
+                            translation.columns.3.z = -0.8
                             let transform = simd_mul(currentFrame.camera.transform, translation)
 
                             // Criamos um novo anchor com essa posição
@@ -50,7 +50,7 @@ class Scene: SKScene {
 
                     })
 
-                    // Criamos um handler para a quest usando a imagem da camera no momento do toque.
+                    // Criamos um handler para a request usando a imagem da camera no momento do toque.
                     let handler = VNImageRequestHandler(cvPixelBuffer: currentFrame.capturedImage, options: [:])
                     // Fazemos o request criado anteriormente com a imagem capturada
                     try handler.perform([request])

@@ -34,14 +34,16 @@ class SceneViewController: UIViewController {
     // MARK: SceneView Configuration
 
     private func configureSceneView() {
-        // Define delegate
+        // Define ARSKViewDelegate
         sceneView.delegate = self
 
         // Mostra estatísticas
         sceneView.showsFPS = true
         sceneView.showsNodeCount = true
 
+        // Instanciamos uma SKScene para ser apresentada. É ela quem vai exibir os elementos na view.
         let scene = Scene(size: self.view.frame.size)
+        scene.scaleMode = .resizeFill
         sceneView.presentScene(scene)
     }
 
@@ -72,7 +74,7 @@ extension SceneViewController: ARSKViewDelegate {
         let labelNode = SKLabelNode(text: identifier)
         labelNode.horizontalAlignmentMode = .center
         labelNode.verticalAlignmentMode = .center
-        labelNode.fontName = UIFont.boldSystemFont(ofSize: 13).fontName
+        labelNode.fontName = UIFont.boldSystemFont(ofSize: 7).fontName
         return labelNode
     }
 
